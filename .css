@@ -1,0 +1,160 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* 너비 살짝 넓힘 */
+    text-align: center;
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 25px;
+    gap: 10px; /* 입력 요소들 사이에 간격 추가 */
+    flex-wrap: wrap; /* 화면 줄어들면 줄바꿈되도록 */
+}
+
+/* 요일 선택 드롭다운 스타일 */
+#day-select {
+    padding: 12px 10px; /* 패딩 조정 */
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1.1em;
+    outline: none;
+    cursor: pointer;
+    background-color: #f8f9fa; /* 배경색 추가 */
+}
+
+#day-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+
+#todo-input {
+    flex-grow: 1; /* 남은 공간 채우도록 */
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px; /* 모서리 둥글게 (드롭다운과 분리) */
+    font-size: 1.1em;
+    outline: none;
+    min-width: 150px; /* 최소 너비 설정 */
+}
+
+#todo-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+
+#add-button {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px; /* 모서리 둥글게 */
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#add-button:hover {
+    background-color: #218838;
+}
+
+#add-button:active {
+    transform: scale(0.98);
+}
+
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#todo-list li {
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+    transition: background-color 0.3s ease;
+    border: 1px solid #e2e6ea;
+    flex-wrap: wrap; /* 항목 안에서도 줄바꿈 */
+}
+
+#todo-list li:hover {
+     background-color: #e9ecef;
+}
+
+#todo-list li.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+    background-color: #e9ecef;
+}
+
+/* 요일 표시 스타일 */
+#todo-list li .todo-day {
+    font-weight: bold;
+    color: #007bff; /* 파란색으로 강조 */
+    margin-right: 10px; /* 할 일 내용과의 간격 */
+    flex-shrink: 0; /* 줄바꿈 시에도 줄어들지 않도록 */
+}
+
+/* 할 일 텍스트 스타일 */
+#todo-list li .todo-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #495057;
+    min-width: 0; /* flex item에서 넘치는 내용 처리 */
+}
+
+#todo-list li.completed .todo-text,
+#todo-list li.completed .todo-day { /* 완료되면 요일 색상도 연하게 */
+     color: #6c757d;
+}
+
+
+/* 삭제 버튼 스타일 */
+#todo-list li button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+    padding: 0;
+    margin-left: auto; /* 항상 오른쪽에 붙도록 */
+    flex-shrink: 0; /* 줄어들지 않도록 */
+}
+
+#todo-list li button:hover {
+    color: #c82333;
+}
