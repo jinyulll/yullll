@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진율이의 주간 투두리스트 🗓️</title>
+    <link rel="stylesheet" href="non.css"> <!-- CSS 파일 연결 -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>오늘의 할 일</h1> <!-- JS에서 선택된 요일로 변경할 예정! -->
+
+        <div class="input-section">
+            <!-- 요일 선택 드롭다운 -->
+            <select id="day-select">
+                <option value="월">월요일</option>
+                <option value="화">화요일</option>
+                <option value="수">수요일</option>
+                <option value="목">목요일</option>
+                <option value="금">금요일</option>
+                <option value="토">토요일</option>
+                <option value="일">일요일</option>
+            </select>
+            <input type="text" id="todo-input" placeholder="무슨 요일에 할 일인가요?">
+            <button id="add-button">추가</button>
+        </div>
+
+        <ul id="todo-list">
+            <!-- 선택된 요일의 할 일 목록이 여기에 표시될 거예요 -->
+        </ul>
+    </div>
+
+    <script src="non.js"></script> <!-- JavaScript 파일 연결 -->
+</body>
+</html>
